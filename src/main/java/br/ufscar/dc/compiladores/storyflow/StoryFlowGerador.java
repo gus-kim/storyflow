@@ -266,6 +266,7 @@ public class StoryFlowGerador {
       + "      btn.className = 'btn';\n"
       + "      btn.textContent = instr.text;\n"
       + "      btn.onclick = () => {\n"
+      + "        if (instr.goTo === STORY.start) inventory.length = 0;\n"
       + "        if (instr.pickup && !inventory.includes(instr.pickup))\n"
       + "          inventory.push(instr.pickup);\n"
       + "        renderScene(instr.goTo);\n"

@@ -240,7 +240,7 @@ A pasta `casos-de-teste/` contém exemplos prontos para demonstrar todas as func
 | `03_erro_item_fantasma.story` | Erro: `tem_item` usa item não declarado |
 | `04_erro_cena_duplicada.story` | Erro: dois cenas com o mesmo nome |
 | `05_aviso_cena_inalcancavel.story` | Aviso: cena declarada mas inalcançável |
-| `masmorra_do_dragao.story` | História elaborada com 5 finais diferentes |
+| `masmorra_do_dragao.story` | História elaborada com menu, 8 finais diferentes e reinício com inventário zerado |
 
 ---
 
