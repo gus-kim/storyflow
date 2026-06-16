@@ -13,8 +13,7 @@ StoryFlow é uma linguagem criada para escrever histórias interativas no estilo
 mvn clean package
 
 # 2. Compile uma história e gere o jogo
-java -jar target/storyflow-1.0-SNAPSHOT-jar-with-dependencies.jar \
-     casos-de-teste/01_aventura_completa.story jogo.html
+java -jar target/storyflow-1.0-SNAPSHOT-jar-with-dependencies.jar casos-de-teste/01_aventura_completa.story jogo.html
 
 # 3. Abra o jogo no navegador
 xdg-open jogo.html        # Linux
@@ -197,9 +196,7 @@ target/storyflow-1.0-SNAPSHOT-jar-with-dependencies.jar
 Com o compilador pronto, o ciclo de escrever e testar histórias é:
 
 ```bash
-java -jar target/storyflow-1.0-SNAPSHOT-jar-with-dependencies.jar \
-     minha_historia.story \
-     meu_jogo.html
+java -jar target/storyflow-1.0-SNAPSHOT-jar-with-dependencies.jar minha_historia.story meu_jogo.html
 ```
 
 **Não precisa rodar o Maven de novo** — só o `java -jar` acima cada vez que alterar a história.
