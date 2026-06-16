@@ -217,6 +217,14 @@ java -jar target/storyflow-1.0-SNAPSHOT-jar-with-dependencies.jar /home/user/his
 
 **Não precisa rodar o Maven de novo** — só o `java -jar` acima cada vez que alterar a história.
 
+Para abrir o jogo gerado diretamente pelo terminal:
+
+```bash
+xdg-open jogo.html   # Linux
+open jogo.html       # macOS
+start jogo.html      # Windows
+```
+
 O `.html` gerado é auto-contido: funciona offline, pode ser enviado por e-mail ou aberto diretamente no navegador sem nenhuma instalação.
 
 ---
