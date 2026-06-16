@@ -115,7 +115,10 @@ fim_se
   narracao "Ninguém entrava lá há décadas."
   ```
 
-- **Strings não podem conter aspas duplas** — use apóstrofe se precisar: `"A espada d'ouro"`.
+- **Strings não podem conter aspas duplas** — o texto vai sempre entre `"` e `"`, então não é possível usar aspas dentro dele. Se precisar de uma marca de citação, use aspas simples:
+  ```
+  narracao "Ele disse: 'cuidado com a armadilha!'"
+  ```
 
 - **Nomes de cenas são sensíveis a maiúsculas** — `"Sala"` e `"sala"` são cenas diferentes. Use um padrão consistente.
 
@@ -193,15 +196,28 @@ target/storyflow-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 ## Como Compilar uma História
 
-Com o compilador pronto, o ciclo de escrever e testar histórias é:
+O compilador recebe dois argumentos: o caminho do arquivo `.story` e o caminho onde o `.html` será salvo.
 
 ```bash
-java -jar target/storyflow-1.0-SNAPSHOT-jar-with-dependencies.jar minha_historia.story meu_jogo.html
+java -jar target/storyflow-1.0-SNAPSHOT-jar-with-dependencies.jar <entrada.story> <saida.html>
+```
+
+Os caminhos podem ser relativos ou absolutos. Exemplos:
+
+```bash
+# .story na mesma pasta onde você está
+java -jar target/storyflow-1.0-SNAPSHOT-jar-with-dependencies.jar minha_historia.story jogo.html
+
+# .story em outra pasta, .html salvo numa pasta específica
+java -jar target/storyflow-1.0-SNAPSHOT-jar-with-dependencies.jar casos-de-teste/masmorra_do_dragao.story ~/Desktop/masmorra.html
+
+# caminho absoluto
+java -jar target/storyflow-1.0-SNAPSHOT-jar-with-dependencies.jar /home/user/historias/aventura.story /home/user/jogos/aventura.html
 ```
 
 **Não precisa rodar o Maven de novo** — só o `java -jar` acima cada vez que alterar a história.
 
-O `meu_jogo.html` gerado é um arquivo auto-contido que funciona em qualquer navegador moderno, offline, sem instalação.
+O `.html` gerado é auto-contido: funciona offline, pode ser enviado por e-mail ou aberto diretamente no navegador sem nenhuma instalação.
 
 ---
 
